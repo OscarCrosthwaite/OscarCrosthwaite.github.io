@@ -8,3 +8,8 @@ body {
     text-align: center;
     color: White;
 }
+
+img {
+    margin-right: 400px;
+    margin-left: 400px;
+}
