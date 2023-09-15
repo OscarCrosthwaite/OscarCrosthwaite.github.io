@@ -20,21 +20,28 @@
 <button type="button" onclick="document.getElementById('box').innerHTML = 'The Tully Monster grew to 35cm long.'">Show answer</button>
 
 <p id="box2">Guess how long it lived</p> 
-<button type="button" onclick="validate()"> <input type="text" name="answer"> </button>
+<button type="button" onclick="validate()"> Show Answer</button>
+<input type="text" name="answer"></input>
 
 </form>
+
+
 <script>
 	function validate() {
 		var x = document.forms["question"]["answer"].value;
 		if (x == "") {
 			document.getElementById("box2").style.color="red";
-		
-			if (x == "35cm") {
-			alert("Correct!");
+		else if (x == "35cm") {
+			;
+				}
+			
 			}
 		}
 	}
-
 </script>
+
+
 </body>
+
+
 </html>
