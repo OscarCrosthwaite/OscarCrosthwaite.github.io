@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
 
-<head><title> First Webpage </title> </head>
-<body style="background-color: blueviolet;">
-  <h1 style="color: aqua;">
-    My Profile </h1>
-  <h3> My interests: </h3>
-  <ul> 
-  <li>Computers</li>
-  <li>Science</li>
-  <li>Computer Science</li>
+<head>
+<title> First Webpage </title> 
+<link href="index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <h1> My Profile </h1>
+  
+
+<img id="ChessImage" src="ChessSet2.jpg", width = 200, height = 250, alt="Chess Pieces">
+
+<div id="Div1">
+  <h3> What am I interested in: </h3>
+  <ul id="List1">
+  <li>Chess</li>
+  <li>Classical Antiquity (History) </li>
+  <li>Politics</li>
   </ul>
-
-
-
-
 
 <h3> My qualifications: </h3>
   <ol>
@@ -22,21 +26,31 @@
   <li>Master's Degree</li>
   </ol>
 
-  <p id="box"> Hello </p>
-<button type="button" onclick="document.getElementById('box').innerHTML = 'goodbye'"> test </button>
+</div>
+<div id="Div2">
+  <h4 id="h4.1"> When is my birthday?</h4>
+  <form>
+  <input id="Q1" type="text" name="answer"></input>
+  <button type="button" onclick="validate()"> Check Answer</button>
+  </form>
+
+
+</div>
+
 
 <script>
-  function srcFunction(word) {
-    document.getElementbyId('box').innerHTML = 'goodbye';
-}
+  function validate() {
+    var x = document.forms["answer"];
+    if (x == "") {
+      document.getElementById("h4.1").style.color = "blue";
+    if (x == "July 13th, 2007")
+      myHeader.innertext = "Correct!";
+    }
+
+  }
+
+
 </script>
-
-<form>
-
-
-
-</form>
-
 
 </body>
 
