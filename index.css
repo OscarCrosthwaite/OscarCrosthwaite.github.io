@@ -7,6 +7,11 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
 #ChessImage {
     float: left;
     width: 30%;
@@ -23,7 +28,7 @@ body {
 }
 
 #Div2 {
-    float: left;
-    width: 300px;
-	text-align: left;
+    margin: auto;
+    display: block;
+	text-align: center;
 }
