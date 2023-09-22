@@ -4,31 +4,35 @@
     <title>Times Tables</title>
 </head>
 <body>
-    <h1>Times Tables Calculator </h1>
-    <form method="post" onsubmit="return timesTableGen()">
-        <p>Times Table to create: <input type="text" value="1" id="number"> </p>
-        <p>Rows Required: <input type="text" value="1" id="rows"> </p>
-        
+    <h1>Times Tables Calculator</h1>
+    <form action="profile.html" method="post" onsubmit="return timesTableGen()">
+        <p>Times Table to create: <input type="text" value="1" id="number"/></p>
+        <p>Rows required: <input type="text" value="1" id="rows"/></p>
         <button type="submit">Generate</button>
         <button type="reset">Reset</button>
+        <button onclick="test()">Test Generate</button>
+     
     </form>
-
-   <div id="output">
-
-   </div>
+    <div id="output">
+    </div>
 <script>
-    function timesTableGen() {
-        
+    function timesTableGen(){
         var table = "";
         var num = document.getElementById("number").value;
         var limit = document.getElementById("rows").value;
-        for (let i=1;1<=6;i++) {
-            table = table + "<p>" + i +" times " + num + " equals " + (i*num) + "</p>";
-        }  
-        document.getElementById("output").innerHTML = table;
+        if (num < 1 && limit < 1) {
+            alert("error");
+        }   else {
+            for (var i=1;i<=limit;i++) {
+                table = table + "<p>" + i + " times " + num + " equals " + (i*num) + "</p>"
+            }
+            document.getElementById("output").innerHTML = table;
+            return false;
+            }
+        }
+    function test() {
+        alert("test")
     }
-
-
-</script>
+</script>    
 </body>
 </html>
